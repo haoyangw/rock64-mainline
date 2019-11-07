@@ -7,8 +7,8 @@ KDEB_PKGVERSION ?= $(KERNEL_VERSION)-$(RELEASE)-ayufan
 
 KERNEL_MAKE ?= make \
 	ARCH=arm64 \
-	HOSTCC=aarch64-linux-gnu-gcc \
-	CROSS_COMPILE="ccache aarch64-linux-gnu-"
+	HOSTCC=x86_64-linux-gnu-gcc \
+	CROSS_COMPILE="aarch64-linux-gnu-"
 
 .config: arch/arm64/configs/$(KERNEL_DEFCONFIG)
 	$(KERNEL_MAKE) $(KERNEL_DEFCONFIG)
